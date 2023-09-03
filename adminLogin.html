@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="login">
+        <input type="text" name="username" placeholder="Username" class="username">
+        <input type="password" name="password" placeholder="Password" class="password">
+        <button class="login-btn">login</button>
+    </div>
+
+
+    <div class="adding-forms disactive">
+        <p>add</p>
+        <div class="add-product-block">
+            <select name="categories" id="category">
+                <option value=" "></option>
+            </select>
+        </div>
+    </div>
+    
+    <script src="../js/data.js"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/main-slider.js"></script>
+    <script src="../js/port-slider.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script type="module">
+        
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.1/firebase-analytics.js";
+        import { getDatabase, ref, set, child, update, remove} from "https://www.gstatic.com/firebasejs/10.3.1/firebase-database.js"
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyAO1uDuqrRyKL6NFkul8Rfj0pBcsZ44KPc",
+            authDomain: "prostackan.firebaseapp.com",
+            databaseURL: "https://prostackan-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "prostackan",
+            storageBucket: "prostackan.appspot.com",
+            messagingSenderId: "758131402247",
+            appId: "1:758131402247:web:650798c468a12f1016eca2",
+            measurementId: "G-BVXQH9PTK5"
+        };
+        
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getDatabase();
+</script>
+</body>
+</html>
